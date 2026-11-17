@@ -91,8 +91,8 @@
       meta.appendChild(el('div', { 'class': 'stat' }, el('b', {}, String(s[0])), el('span', {}, s[1])));
     });
     document.getElementById('formula').innerHTML =
-      'Implied value = TVL × <code>sector multiple</code> × <code>growth</code> × <code>maturity</code> × <code>chains</code>.' +
-      ' <span class="dim">Snapshot ' + esc(DATA.as_of) + ' · ' + DATA.board_size + ' pre-token protocols ranked, ' +
+      'Implied value = TVL × <code>sector multiple</code> × <code>growth</code> × <code>maturity</code> × <code>chains</code>' +
+      ' <span class="dim">· Snapshot ' + esc(DATA.as_of) + ' · ' + DATA.board_size + ' pre-token protocols ranked, ' +
       DATA.watchlist_size + ' on the watchlist · model ' + esc(DATA.model_version) +
       ' · every row recomputed on this page and checked against the board.</span>';
   }
@@ -213,7 +213,7 @@
       el('button', { 'class': 'close', onclick: function () { state.selected = null; detailEl.hidden = true; renderBoard(); } }, 'Close'));
     detailEl.appendChild(head);
     detailEl.appendChild(el('p', { 'class': 'note' },
-      (row.category || 'Uncategorised') + ' · ' + row.chains.join(', ') + ' · listed ' + (row.listed_at || 'unknown') +
+      (row.category || 'Uncategorised') + ' · ' + row.chains.join(', ') + ' · first tracked ' + (row.listed_at || 'not recorded') +
       ' · records no token in the snapshot.'));
     var kv = el('div', { 'class': 'kv' });
     [
