@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Token Radar — pre-token protocols ranked by implied value</title>
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<header class="top">
+  <div class="brand">
+    <div class="mark">◈</div>
+    <div>
+      <h1>Token Radar</h1>
+      <p class="sub">Which pre-token protocol is worth farming next — and what to do about it.</p>
+    </div>
+  </div>
+  <div class="meta" id="meta"></div>
+</header>
+
+<section class="formula" id="formula"></section>
+
+<nav class="tabs" id="tabs">
+  <button data-tab="pre-token" class="on">Pre-token board</button>
+  <button data-tab="live">Already trading</button>
+</nav>
+
+<section class="controls" id="controls">
+  <input id="q" type="search" placeholder="Search a protocol…" aria-label="Search protocols">
+  <select id="cat" aria-label="Filter by category"></select>
+  <select id="chain" aria-label="Filter by chain"></select>
+  <label class="check"><input id="wl" type="checkbox"> Watchlist only</label>
+  <select id="sort" aria-label="Sort the board">
+    <option value="implied">Sort: implied value</option>
+    <option value="tvl">Sort: TVL</option>
+    <option value="growth">Sort: 7-day growth</option>
+    <option value="age">Sort: age</option>
+  </select>
+</section>
+
+<main id="board" aria-busy="true"></main>
+
+<section class="detail" id="detail" hidden></section>
+
+<section class="method" id="method"></section>
+
+<footer class="foot">
+  <p>Snapshot: DefiLlama protocols, frozen at the date above. “Records no token” means the
+  snapshot lists no token for the protocol — never a promise that it has none, or that one
+  will launch. Implied values are this radar's own claim, computed from the snapshot's
+  figures alone. Farm plans are suggestions, not advice; never pay anyone to claim an
+  airdrop, and only use links the protocol itself publishes.</p>
+</footer>
+<script src="../data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
